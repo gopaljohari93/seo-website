@@ -1,0 +1,384 @@
+/* 1 General */
+/*  Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed%3Awght%40300%3B700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans%3Awght%40300%3B400%3B500%3B600%3B700%3B800&display=swap');
+
+/*
+========================================
+   SASS implementation website Design
+========================================
+*/
+/* Variable sass */
+/* background Color */
+$secondary-color: #f77949;
+$bg-blue: #37418e;
+$bg-white: #fff;
+$bg-dark-blue: #292b70;
+$bg-gray: #ecf0f9;
+
+/* Text Color */
+$text-black: #1f1f1f;
+$text-blue: #1f294c;
+$text-gray: #6d6e7b;
+$text-white: #fff;
+
+/* Fonts */
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'open sans condensed', sans-serif;
+
+/*
+========================================
+   SASS implementation website Design
+========================================
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: url(../images/page-background.webp);
+    background-size: cover;
+    background-position: center 0px;
+    background-repeat: no-repeat;
+    background-attachment: initial;
+    overflow-x: hidden;
+}
+
+/*
+=========================
+    Custom Scrollbar
+=========================
+*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $bg-gray;
+}
+
+::-webkit-scrollbar-track {
+    background: $secondary-color;
+}
+
+/*
+=========================
+     Common Css
+=========================
+*/
+section {
+    padding: 3.125rem 0;
+}
+
+.main-btn {
+    display: inline-block;
+    border-radius: 26px;
+    transition: .2s;
+    padding: 0.625rem 2.313rem;
+    background-color: $secondary-color;
+    color: $text-white;
+    font-family: $primary-font;
+    font-size: 1.063rem;
+    text-decoration: none;
+    box-shadow: -2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-btn:hover {
+    background-color: $bg-blue;
+    color: $text-white;
+}
+
+h1 {
+    font-size: 4.375rem;
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $text-blue;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.813rem;
+    line-height: 4rem;
+    font-family: $primary-font;
+    font-weight: 700;
+    color: $text-blue;
+    margin-bottom: 1rem;
+    letter-spacing: 0;
+}
+
+h3 {
+    font-size: 1.563rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    font-style: normal;
+    color: $text-blue;
+}
+
+p {
+    font-size: 0.938rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    color: $text-gray;
+}
+
+input:hover,
+input:focus,
+textarea:focus,
+textarea:hover,
+button {
+    border-color: $secondary-color !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*
+=========================
+      2 Navbar
+=========================
+*/
+/* Nesting Sass */
+.header_wrapper {
+    .navbar {
+        -webkit-transition: all .2s linear;
+        -o-transition: all .2s linear;
+        transition: all .2s linear;
+
+        .navbar-brand {
+            img {
+                max-width: 150px;
+                height: auto;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .nav-item {
+        margin: 0 0.625rem;
+
+        .nav-link {
+            font-size: 1.063rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-family: $primary-font;
+            color: $text-blue;
+        }
+
+        .nav-link.active {
+            color: $secondary-color;
+        }
+    }
+}
+
+/* Navbar scroll fiex css code */
+.header-scrolled {
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5.313rem;
+    background-color: $bg-white;
+    -webkit-box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.5);
+    box-shadow: 0 4px 6px 0 rgba(12, 0, 46, 0.5);
+}
+
+/*
+=========================
+      3 Banner
+=========================
+*/
+.banner_wrapper {
+    padding-top: 6.2rem;
+}
+
+/*
+=========================
+     4 Services
+=========================
+*/
+.services_wrapper h3 span {
+    color: $secondary-color;
+}
+
+.services_wrapper .service_phone {
+    max-width: 70%;
+}
+
+/* 5 Blog */
+.blog_wrapper .newsletter_wrapper {
+    background-color: $bg-blue;
+}
+
+/* form css design style code */
+.blog_wrapper .newsletter {
+    width: 50%;
+    margin: auto;
+}
+
+/* form background css code */
+.blog_wrapper .form-control {
+    background-color: $bg-dark-blue;
+    border-color: $bg-dark-blue;
+    border-style: solid;
+    border-radius: 26px;
+    color: $text-white;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+    padding: 10px 32px;
+}
+
+.blog_wrapper input::placeholder {
+    color: $text-white;
+}
+
+.blog_wrapper a {
+    color: $text-blue;
+    text-decoration: none;
+}
+
+.blog_wrapper .date,
+.blog_wrapper .card a:hover {
+    color: $secondary-color;
+}
+
+/* 6 Conatct */
+.contact_wrapper input,
+.contact_wrapper textarea {
+    background-color: $bg-white;
+    border-color: $bg-gray;
+    border-radius: 15px;
+    color: $text-gray;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 15px 21px 15px 21px;
+}
+
+
+/* 7 Footer */
+.footer_wrapper a{
+    color: $text-gray;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+}
+.footer_wrapper a:hover{
+    color: $secondary-color;
+}
+
+/* form validation css */ 
+// input{
+//     width: 200px;
+//     margin: 10px 0px;
+//     padding: 10px;
+// }
+// button[type="submit"]{
+//     width: 222px;
+//     background-color: #3498db;
+//     border: 0;
+//     color: white;
+// }
+.error{
+    color: red;
+    margin: 0px;
+    text-align: left;
+}
+
+
+/*
+======================================
+   Responsive Design Media Quries
+======================================
+*/
+/* Large screen TV breakpoint */
+@media (max-width: 1400px) {
+
+    /* 4 Services */
+    .services_wrapper .service_phone {
+        max-width: 80%;
+    }
+}
+
+/* Large screen Desktop breakpoint */
+@media (max-width: 1230px) {
+
+    /* 4 Services */
+    .services_wrapper .service_phone {
+        max-width: 100%;
+    }
+}
+
+/* ipad breakpoint */
+@media (max-width: 991px) {
+
+    /* custom css */
+    section {
+        padding: 1.25rem 0;
+    }
+
+    h1 {
+        font-size: 3.125rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        line-height: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+    }
+
+    /* 2 Navbar */
+    .header-scrolled {
+        height: auto;
+    }
+
+    .header_wrapper .menu-navbar-nav {
+        text-align: center;
+        background-color: $bg-white;
+        padding-bottom: 0.938rem;
+    }
+
+    .header_wrapper .nav-item .nav-link {
+        margin-top: 0.938rem;
+    }
+
+    /* Blog */
+    .blog_wrapper .newsletter {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    /* custom css */
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    h3 {
+        font-size: 1.375rem;
+    }
+
+    p {
+        // font-size: 13px;
+        font-size: 0.831rem;
+    }
+
+    .main-btn {
+        font-size: 0.813rem;
+    }
+}
